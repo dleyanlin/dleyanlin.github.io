@@ -7,7 +7,7 @@ tags: Docker
 
 
 ### 概述
-![Docker Security modules](/public/images/docker security modules.png)
+![Docker Security modules](/public/img/docker security modules.png)
 
  * Namespaces – PID, Mount, Network, IPC, UTC, User.
 
@@ -20,7 +20,7 @@ tags: Docker
  * Special kernel modules like AppArmor, SELinux – Provides granular control over Kernel resources.
 
  * Docker client access Docker engine
-   ![docker client coummunication with engine](/public/images/docker client communication engine.png)
+   ![docker client coummunication with engine](/public/img/docker client communication engine.png)
 
 ### 威胁
 
@@ -56,7 +56,7 @@ tags: Docker
 
 ##### Security Tips
 
-![](/public/images/docker security toolbox.png)
+![](/public/img/docker security toolbox.png)
 
 1. Set a User: RUN groupadd -r user_grp && useradd -r -g user_grp user USER user
 
