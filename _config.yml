@@ -24,13 +24,13 @@ gavatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
 favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
 # google analytics 设置
-ga:
-  id: UA-56952211-1
-  url: zmywly8866.github.io
+#ga:
+#  id: UA-56952211-1
+#  url: zmywly8866.github.io
 
 # disqus 设置
-disqus:
-  shortname: dleyanlin
+#disqus:
+#  shortname: dleyanlin
 
 # 主题设置，自动激活某个标签
 active: 技术
