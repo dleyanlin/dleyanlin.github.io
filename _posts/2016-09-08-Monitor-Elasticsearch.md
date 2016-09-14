@@ -1,5 +1,12 @@
+---
+layout: post
+title: How We Monitor Elasticsearch with Graphite and Grafana
+category: ELK
+tags: elk
+---
 
-By [Roi Ravhon](http://logz.io/author/roiravhon/)| September 8th, 2016|[Blo(http://logz.io/category/blog/), [Elasticsearch](http://logz.io/category/blog/elasticsearch/)
+
+By [Roi Ravhon](http://logz.io/author/roiravhon/)| September 8th, 2016
 
 “How do you monitor Elasticsearch at this scale?” is a question we are asked again and again by[ELK Stack](http://logz.io/learn/complete-guide-elk-stack/) users and our customers. Recognizing the challenge, we wanted to share some of our monitoring engineering with everyone!
 A Short History Lesson
