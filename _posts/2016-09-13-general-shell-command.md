@@ -114,3 +114,7 @@ tags: Shell
 ### 负载测试，30秒内向Google发起20个并发连接
 
     siege -c20 www.google.co.uk -b -t30s
+
+### Centos7安装ss
+
+    bash <(curl -s http://morning.work/examples/2015-12/install-shadowsocks.sh)
