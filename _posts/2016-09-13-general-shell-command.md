@@ -115,6 +115,8 @@ tags: Shell
 
     siege -c20 www.google.co.uk -b -t30s
 
-### Centos7安装ss
+### Centos7安装ss and anyconnect
 
     bash <(curl -s http://morning.work/examples/2015-12/install-shadowsocks.sh)
+
+    https://github.com/travislee8964/ocserv-auto
