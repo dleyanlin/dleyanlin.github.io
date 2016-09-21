@@ -55,3 +55,6 @@ Here are some screenshots of our Grafana dashboard that is based on our es2graph
 ![monitor elasticsearch graphite grafana 2](http://upload-images.jianshu.io/upload_images/22730-403118c2791b4dbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![monitor elasticsearch graphite grafana 3](http://upload-images.jianshu.io/upload_images/22730-0f06d2d1d829b233.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+Another method use [prometheus](https://prometheus.io/) and Grafana
