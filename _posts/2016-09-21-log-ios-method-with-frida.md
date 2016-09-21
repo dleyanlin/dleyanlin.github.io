@@ -71,9 +71,8 @@ After Frida has attached to the process, try sending a message:
 
 ### Additional Information__Modifying arguments in Interceptor
 
-It’s easy to dynamically modify arguments with Frida too. Here’s an example script that will append the string @" :)"
- to the first method argument to MessageViewController
-’s sendMessageWithText:
+It’s easy to dynamically modify arguments with Frida too. Here’s an example script that will append the string: " :)"
+ to the first method argument to MessageViewController’s sendMessageWithText:
 
     var sendMessage = ObjC.classes.MessageViewController["- sendMessageWithText:"];
 
@@ -84,4 +83,4 @@ It’s easy to dynamically modify arguments with Frida too. Here’s an example 
       args[2] = modifiedMessage;}
     });
 
-origin: http://www.mopsled.com/2015/log-ios-method-arguments-with-frida/
+origin: (http://www.mopsled.com/2015/log-ios-method-arguments-with-frida/)
