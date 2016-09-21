@@ -17,6 +17,7 @@ The first step is to follow [Frida’s iOS tutorial](http://www.frida.re/docs/i
 2. Install Frida on your jailbroken iOS device through Cydia
 3. Test that Frida can communicate with your iOS device over USB
 
+```bash
 $ frida-ps -U
 PID Name
 --- ----------------
@@ -25,6 +26,7 @@ PID Name
 563 LINE133 Mail
 601 Messenger
 666 Settings...
+```
 
 ### Identify Objective-C method
 
@@ -38,20 +40,30 @@ Use Frida to identify the underlying function in-memory:
 ![indetify LIne Application](/public/img/frida-Line.png)
 
 ### Write Interceptor script to attach to method
-Create a file called interceptSendMessage.js
- to hold the method-injecting data:
+Create a file called interceptSendMessage.js to hold the method-injecting data:
 
-var sendMessage = ObjC.classes.MessageViewController["- sendMessageWithText:"];
+```bash
+    var sendMessage = ObjC.classes.MessageViewController["- sendMessageWithText:"];
 
-Interceptor.attach(sendMessage.implementation, { onEnter: function(args) { // args[0] is self // args[1] is selector (SEL "sendMessageWithText:") // args[2] holds the first function argument, an NSString var message = ObjC.Object(args[2]); console.log("\n[MessageViewController sendMessageWithText:@\"" + message.toString() + "\"]");
-}});
+    Interceptor.attach(sendMessage.implementation, {
+        onEnter: function(args) {
+        // args[0] is self
+        // args[1] is selector (SEL "sendMessageWithText:")
+        // args[2] holds the first function argument, an NSString
+        var message = ObjC.Object(args[2]);
+        console.log("\n[MessageViewController sendMessageWithText:@\"" + message.toString() + "\"]");}
+    });
+```
+
 
 
 ### Run the script
 To tell Frida to connect to the LINE app on an iOS device over USB and run the script ininterceptSendMessage.js
 , run this command:
 
-$ frida -U -l interceptSendMessage.js LINE
+```bash
+    $ frida -U -l interceptSendMessage.js LINE
+```
 
 After Frida has attached to the process, try sending a message:
 
@@ -63,9 +75,13 @@ It’s easy to dynamically modify arguments with Frida too. Here’s an example 
  to the first method argument to MessageViewController
 ’s sendMessageWithText:
 
-var sendMessage = ObjC.classes.MessageViewController["- sendMessageWithText:"];
+    var sendMessage = ObjC.classes.MessageViewController["- sendMessageWithText:"];
 
-Interceptor.attach(sendMessage.implementation, { onEnter: function(args) { var message = ObjC.Object(args[2]); var modifiedMessage = message["- stringByAppendingString:"](" :)"); args[2] = modifiedMessage;
-}});
+    Interceptor.attach(sendMessage.implementation, {    
+      onEnter: function(args) {
+      var message = ObjC.Object(args[2]);
+      var modifiedMessage = message["- stringByAppendingString:"](" :)");
+      args[2] = modifiedMessage;}
+    });
 
 origin: http://www.mopsled.com/2015/log-ios-method-arguments-with-frida/
