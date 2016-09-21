@@ -69,7 +69,7 @@ After Frida has attached to the process, try sending a message:
 
 ![resutl of run script](/public/img/frida-message-demonstration.png)
 
-### Additional Information__Modifying arguments in Interceptor
+### Modifying arguments in Interceptor
 
 It’s easy to dynamically modify arguments with Frida too. Here’s an example script that will append the string: " :)"
  to the first method argument to MessageViewController’s sendMessageWithText:
