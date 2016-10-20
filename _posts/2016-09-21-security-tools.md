@@ -11,4 +11,10 @@ tags: Sectools
 ##### Vuls:
    Vulnerability scanner for Linux/FreeBSD, agentless, written in golang.
 
-  https://github.com/future-architect/vuls
+   https://github.com/future-architect/vuls
+
+
+##### ssh-audit:
+    ssh-audit is a tool for ssh server auditing.
+
+  https://github.com/arthepsy/ssh-audit
