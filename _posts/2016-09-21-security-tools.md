@@ -15,9 +15,9 @@ tags: Sectools
 
 
 ##### Lynis:
-    Lynis - Security auditing and hardening tool, for UNIX-based systems
+  Lynis - Security auditing and hardening tool, for UNIX-based systems
 
-      [https://github.com/CISOfy/lynis](https://github.com/CISOfy/lynis)
+  [https://github.com/CISOfy/lynis](https://github.com/CISOfy/lynis)
 
 ##### ssh-audit:
   ssh-audit is a tool for ssh server auditing.
