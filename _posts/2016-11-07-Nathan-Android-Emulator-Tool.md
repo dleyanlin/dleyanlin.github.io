@@ -5,7 +5,9 @@ category: Security
 tags: security
 ---
 
-### Nathan is a 5.1.1 SDK 22 AOSP Android emulator customized to perform mobile security assessment.
+### Introduce
+
+ Nathan is a 5.1.1 SDK 22 AOSP Android emulator customized to perform mobile security assessment.
 
 ### Supported architectures:
 
@@ -55,7 +57,7 @@ The init command downloads all the files required to run use Nathan Emulator.
 ### Usage
 
 
-*** To start Nathan: ***
+***To start Nathan:***
 
     $ ./nathan.py start
 
@@ -63,29 +65,29 @@ The init command downloads all the files required to run use Nathan Emulator.
 
     $ ./nathan.py start -p http://127.0.0.1:3128
 
-To create a snapshot of current user image data with a label (current in this case):
+***To create a snapshot of current user image data with a label (current in this case):***
 
     $ ./nathan.py snapshot -sl current
 
-To restore the emulator to the snapshot with label current:
+***To restore the emulator to the snapshot with label current:***
 
     $ ./nathan.py restore --rl current
 
-To get a list of available snapshots to restore:
+***To get a list of available snapshots to restore:***
 
     $ ./nathan.py restore --ll  
 
-Every time the emulator is started, a temporary copy of system image is created and each changes made to system data is lost when the emulator is powered off.
+**Every time the emulator is started, a temporary copy of system image is created and each changes made to system data is lost when the emulator is powered off.
 
-To keep permanent the changes, the command freeze is available:
+To keep permanent the changes, the command freeze is available:**
 
     $ ./nathan.py freeze  
 
-To push files from a folder to a running Nathan emulator, the command push is available:
+***To push files from a folder to a running Nathan emulator, the command push is available:***
 
     $ ./nathan.py push -f folder  
 
-The complete list of command is:
+***The complete list of command is:***
 
 ```bash
 usage: nathan.py [-h] [-v] [-a ARCH]
