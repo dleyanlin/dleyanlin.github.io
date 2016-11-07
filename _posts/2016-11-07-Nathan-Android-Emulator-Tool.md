@@ -77,9 +77,9 @@ The init command downloads all the files required to run use Nathan Emulator.
 
     $ ./nathan.py restore --ll  
 
-**Every time the emulator is started, a temporary copy of system image is created and each changes made to system data is lost when the emulator is powered off.
+***Every time the emulator is started, a temporary copy of system image is created and each changes made to system data is lost when the emulator is powered off.
 
-To keep permanent the changes, the command freeze is available:**
+To keep permanent the changes, the command freeze is available:***
 
     $ ./nathan.py freeze  
 
