@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Nathan: Android Emulator for Mobile Security Testing Tool
+title: Nathan Android Emulator for Mobile Security Testing Tool
 category: Security
 tags: security
 ---
-
 
 ### Nathan is a 5.1.1 SDK 22 AOSP Android emulator customized to perform mobile security assessment.
 
