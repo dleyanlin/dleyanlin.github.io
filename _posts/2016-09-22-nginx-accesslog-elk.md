@@ -2,7 +2,7 @@
 layout: post
 title: Building an NGINX Access Log Monitoring Dashboard
 category: ELK
-tags: elk,nginx
+tags: nginx
 ---
 
 ### **About NGINX**
